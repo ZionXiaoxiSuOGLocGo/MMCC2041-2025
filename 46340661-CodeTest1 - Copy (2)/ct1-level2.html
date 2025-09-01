@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Code Test - Level 2</title>
+    <!-- Google font: Bubblegum Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="ct1-level2.css" />
+    <script>
+        $(document).ready(function () {
+            // Hide all labels (captions) initially
+            $('.Label').hide();
+
+            // Animate caption sliding in/out
+            $('h1.Set').mouseenter(
+                function () {
+                    $(this).find('.Label').stop().slideDown();
+                }
+            );
+            $('h1.Set').mouseleave(
+                function () {
+                    $(this).find('.Label').stop().slideUp();
+                }
+            );
+        });
+    </script>
+</head>
+
+<body>
+    <section class="gallery">
+        <!-- Batman -->
+        <h1 class="Set">
+            <img class="Image" src="ct1-images/batman.jpg" width="576" height="365" alt="Batman" />
+            <img class="Logo" src="ct1-images/batman_symbol.png" alt="Batman Symbol" />
+            <p class="Label">Batman</p>
+        </h1>
+        <!-- Superman -->
+        <h1 class="Set">
+            <img class="Image" src="ct1-images/superman.jpg" width="576" height="365" alt="Superman" />
+            <img class="Logo" src="ct1-images/superman_symbol.png" alt="Superman Symbol" />
+            <p class="Label">Superman</p>
+        </h1>
+        <!-- Wonder Woman -->
+        <h1 class="Set">
+            <img class="Image" src="ct1-images/wonderwoman.jpg" width="576" height="365" alt="Wonder Woman" />
+            <img class="Logo" src="ct1-images/wonderwoman_symbol.png" alt="Wonder Woman Symbol" />
+            <p class="Label">Wonder Woman</p>
+        </h1>
+        <!-- Robin -->
+        <h1 class="Set">
+            <img class="Image" src="ct1-images/robin.jpg" width="576" height="365" alt="Robin" />
+            <img class="Logo" src="ct1-images/robin_symbol.png" alt="Robin Symbol" />
+            <p class="Label">Robin</p>
+        </h1>
+    </section>
+</body>
+
+</html>

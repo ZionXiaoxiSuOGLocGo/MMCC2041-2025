@@ -1,0 +1,47 @@
+/* Basic body styling */
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+
+h1.Set {
+  position: relative; /* for positioning caption elements */
+  width: 576px;       
+  margin: 20px auto;  /* Centered with spacing between */
+  border: 1px solid #ccc; 
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Style for main hero images */
+h1.Set .Image {
+  width: 100%; /* Scale to container width */
+  height: auto;
+  display: block;
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Style for the symbol badges */
+h1.Set .Logo {
+  position: absolute;
+  bottom: 10px; /* Position inside container */
+  right: 10px;
+}
+
+/* Style for captions/labels */
+h1.Set .Label {
+  display: inline-block; /* Hidden initially, shown on hover via jQuery */
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: default;
+}

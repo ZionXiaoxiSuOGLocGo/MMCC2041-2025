@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Superhero Gallery - Level 3</title>
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+<script src="jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" href="ct1-level3.css" />
+<script>
+$(document).ready(function () {
+  // Change background when clicking on a hero article
+  $('section.gallery article.character').on('click', function () {
+    const hero = $(this).data('hero');
+    $('body').css({
+      'background-image': 'url("ct1-images/backgrounds/' + hero + '_background.jpg")',
+      'background-position': 'center',
+      'background-size': 'cover'
+    });
+  });
+});
+</script>
+</head>
+<body>
+<section class="gallery">
+
+  <!-- Batman -->
+  <article class="character" data-hero="batman">
+    <figure>
+      <img class="main-image" src="ct1-images/batman.jpg" alt="Batman" />
+      <div class="label">
+        Batman
+        <div class="quote">"It's not who I am underneath, but what I do that defines me."</div>
+      </div>
+    </figure>
+    <img class="badge" src="ct1-images/batman_symbol.png" alt="Batman Symbol" />
+  </article>
+
+  <!-- Wonder Woman -->
+  <article class="character" data-hero="wonderwoman">
+    <figure>
+      <img class="main-image" src="ct1-images/wonderwoman.jpg" alt="Wonder Woman" />
+      <div class="label">
+        Wonder Woman
+        <div class="quote">"I will fight for those who cannot fight for themselves."</div>
+      </div>
+    </figure>
+    <img class="badge" src="ct1-images/wonderwoman_symbol.png" alt="Wonder Woman Symbol" />
+  </article>
+
+  <!-- Robin -->
+  <article class="character" data-hero="robin">
+    <figure>
+      <img class="main-image" src="ct1-images/robin.jpg" alt="Robin" />
+      <div class="label">
+        Robin
+        <div class="quote">"Batman needs a Robin!"</div>
+      </div>
+    </figure>
+    <img class="badge" src="ct1-images/robin_symbol.png" alt="Robin Symbol" />
+  </article>
+
+  <!-- Superman -->
+  <article class="character" data-hero="superman">
+    <figure>
+      <img class="main-image" src="ct1-images/superman.jpg" alt="Superman" />
+      <div class="label">
+        Superman
+        <div class="quote">"It’s not an S on my chest… It’s a symbol of hope."</div>
+      </div>
+    </figure>
+    <img class="badge" src="ct1-images/superman_symbol.png" alt="Superman Symbol" />
+  </article>
+
+</section>
+</body>
+</html>

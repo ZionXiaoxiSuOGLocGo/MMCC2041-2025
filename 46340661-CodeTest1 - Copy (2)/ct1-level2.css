@@ -1,0 +1,59 @@
+/* Basic body styling: radial gradient background from #999999 to black, centered, fixed */
+body {
+  margin: 0;
+  min-height: 100vh;
+  justify-content: center; /* centers the gallery horizontally */
+  background: radial-gradient(circle at center, #999999, black);
+  background-attachment: fixed; /* background doesn't scroll with content */
+  
+  padding-top: 20px;
+}
+
+/* Container for all superhero items, stacked vertically and centered */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Each hero container styled like a card */
+h1.Set {
+  position: relative; /* for absolutely positioning child elements */
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+/* Main hero images styling */
+h1.Set .Image {
+
+  width: auto;
+  max-width: 100%;
+  border: 10px solid #ff9900; /* orange border */
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Badge (symbol) styling */
+h1.Set .Logo {
+  transform-origin: center center;
+  position: absolute;
+  bottom: -30px;
+  right: -60px;
+  box-sizing: border-box;
+}
+
+/* Label */
+h1.Set .Label {
+  position: absolute;
+  bottom: 0px; /* align at bottom of container */
+  left: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
+  color: white;
+  font-family: 'Bubblegum Sans', cursive; /* imported from Google Fonts */
+  font-size: 32px; /* match overall font size */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
