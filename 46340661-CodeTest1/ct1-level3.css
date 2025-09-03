@@ -74,17 +74,14 @@ figure .label {
   padding: 10px;
   box-sizing: border-box;
   text-align: left;
-  /* Start hidden: */
-  opacity: 0;
-  transform: translateY(20px);  /* start 20px below its final position */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  pointer-events: none; /* don't trigger hover when hidden */
+  overflow: hidden;         /* hide overflow for slide effect */
+  max-height: 0;            /* start collapsed */
+  transition: max-height 0.5s ease; /* animate max-height for slide */
 }
 
+/* On hover, expand the label to show */
 figure:hover .label {
-  opacity: 1;
-  transform: translateY(0); /* slide up into view */
-  pointer-events: auto; /* enable hover interactions */
+  max-height: 200px; /* set a value large enough for content */
 }
 
 /* Quote below name, at 3/4 size of font (24px) */
